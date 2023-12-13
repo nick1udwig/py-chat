@@ -46,10 +46,10 @@ def handle_message(our_node, message_archive):
                         Request(False, 5, message.value.ipc, None),
                         None,
                     )
-                    send_response(
-                        Response(False, json.dumps({"Ack": None}).encode("utf-8"), None),
-                        None,
-                    )
+                send_response(
+                    Response(False, json.dumps({"Ack": None}).encode("utf-8"), None),
+                    None,
+                )
             elif "History" in ipc:
                 send_response(
                     Response(
